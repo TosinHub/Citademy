@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Name Demo</title>
+</head>
+<body>
+    <p>Javascript is an easy programming language:</p>
+    <p>
+        <label >
+            <input type="radio" name="rate" value="Strongly Agree" id="strongly-agree"> Strongly Agree
+        </label>
+        <label>
+            <input type="radio" name="rate" value="Agree" id="agree"> Agree
+        </label>
+        <label>
+            <input type="radio" name="rate" value="Neutral" id="neutral"> Neutral
+        </label>
+        <label >
+            <input type="radio" name="rate" value="Disagree" id="disagree"> Disagree
+        </label>
+        <label>
+            <input type="radio" name="rate" value="Strongly Disagree" id="strongly-disagree"> Strongly Disagree
+        </label>
+    </p>
+    <p>
+        <button id="btnRate">Submit</button> <button id="btnClear">Clear</button>
+        <button id="countTag">Count Paragraphs</button>
+    </p>
+    <p id="output"></p>
+
+    <h2 class="heading">Get Element By Class Name</h2>
+
+    <ul id="menu">
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item">Javascript</li>
+        <li class="item">Node</li>
+    </ul>
+
+    <script>
+        let button = document.getElementById("btnRate");
+        let output = document.getElementById("output")
+
+        button.addEventListener('click', () =>{
+            let rates = document.getElementsByName('rate');
+
+          
+            
+            //for each loop on an arrar
+            rates.forEach((rate) =>{
+
+        
+                if(rate.checked){
+                    output.innerText = 'You selected: ' + rate.value
+                }
+            })
+        })
+
+
+        let clearButton = document.getElementById('btnClear')
+
+        clearButton.addEventListener('click', () => {
+            output.innerText = ""
+        })
+
+
+        //GET ELEMENT BY TAG NAME
+        let countTag = document.getElementById("countTag")
+        countTag.addEventListener('click', ()=>{
+            let paragraphs = document.getElementsByTagName('p')
+
+            alert(`The number of paragraphs ${paragraphs.length}`)
+        })
+
+        //GET ELEMENT BY CLASS NAME
+
+        let menu = document.getElementById('menu')
+        let lists = menu.getElementsByClassName('item')
+
+
+        //console.log(lists[0].textContent)
+       // console.log(lists[1].textContent)
+       // console.log(lists[2].textContent)
+  //0, 1, 2, 3
+
+        //USING QUERY SELECTOR
+
+        let element = document.querySelectorAll('*')
+        //console.log(element)
+
+        //universal, tag, class, id
+
+        let firstP = document.querySelector('#output')
+        console.log(firstP)
+
+
+    </script>
+</body>
+</html>

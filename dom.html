@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript DOM</title>
+</head>
+<body>
+    <p id="message">This is Javascript DOM</p>
+    <p id="dom">Get element by ID</p>
+
+    <input type="radio" name="language" value="Javascript" >
+    <input type="radio" name="language" value="Typescript" >
+
+    <script>
+
+        //GET ELEMENT BY ID
+        const p = document.getElementById("message")
+
+        console.log(p)
+
+        //GET ELEMENT BY NAME
+
+        let data = document.getElementsByName("language")
+
+        console.log(data)
+
+
+
+
+        
+    </script>
+</body>
+</html>
+
+
+
+<!--
+DOM - Document Object Model : is an application programming interface (API) for manipulating HTML Document.
+DOCUMENT - ROOT NODE
+HTML : is the child node of DOCUMENT
+HEAD:is a child node to HTML
+BODY: is also a child node to HTML
+-->

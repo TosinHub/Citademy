@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="container">
+         <button id="btn">Click Me!</button>
+    </div>
+
+
+        <a href="https://google.com"> Google Home Page</a> <br>
+
+        <input type="button" value="Save" onclick="alert()">
+
+        
+    
+
+    <script>
+
+        //INTRODUCTION TO JAVASCRIPT EVENTS
+
+        let btn = document.querySelector('#btn');
+
+
+       /* btn.addEventListener('click', function(){
+              alert('The button was clicked');
+        }); */
+
+        //event bubbling || event capturing
+
+        //element button
+        //element div
+        //element body
+        //element html
+        //element document
+
+
+        //EVENT OBJECTS
+        //METHOD: type, target, preventdefault(it prevent the default behaviour of an event)
+
+
+        btn.addEventListener('click', function(e){
+            console.log(e.target)
+        })
+
+
+        btn.onclick = function (){
+            alert(' this is the new way to use click event')
+        }
+
+
+        let link = document.querySelector('a');
+
+        link.addEventListener('click', function(e){
+            console.log(e.type);
+            e.preventDefault();
+        })
+
+
+
+    </script>
+</body>
+</html>

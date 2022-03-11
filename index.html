@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>Javascript 101</title>
+
+  <script src="main.js"></script>
+</head>
+<body>
+    <h1>Starting Javascript</h1>
+
+    <p id="start"></p>
+
+    <button type="button" onclick="changeFunction()"> Start</button>
+
+<p id="end"></p>
+
+<p id="full_details"></p>
+
+
+
+<button onclick="endFunction()">End</button>
+<script>
+    //JAVASCRIPT OBJECTS
+    var firstName = "Tosin"
+    var lastName = "Olugbenga"
+    var age = 20
+    var fullName = firstName+" "+lastName  //concantenation
+
+
+   //console.log("My name is " + fullName)
+  
+   //document.getElementById("start").innerHTML = "My name is "+ fullName + " and i am "+ age + " years old"
+
+
+   var myDetails =  {
+        firstName: "Tosin",
+        lastName: "Olugbenga",
+        age: 24,
+        fullName: function(){
+            return this.firstName +" "+ this.lastName
+        }
+   }
+
+    console.log("My FIRST name is "+ myDetails.firstName)
+
+
+    console.log("My full name is "+ myDetails.fullName())
+
+
+  
+</script>
+
+
+
+</body>
+</html>

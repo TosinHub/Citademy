@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="sign_up" action="" method="POST">
+    
+        <h1>Sign Up</h1>
+
+        <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" />
+            <small></small>
+        </div>
+
+        <div class="field">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Enter your email" />
+            <small></small>
+        </div>
+    
+        <button type="submit" value="submit">Submit</button>
+    
+    </form>
+
+
+
+<script>
+    //JAVASCRIPT FORMS
+
+   // const form = document.getElementById('subscribe')
+
+   // form.addEventListener('submit', (e)=>{
+
+        //handle the form data
+     //   console.log(e.type)
+     //   e.preventDefault()
+  //  })
+
+
+    const form = document.getElementById('sign_up')
+    const name = form.elements['name']
+    const email = form.elements['email']
+
+    let fullName = name.value
+    let emailAddress = email.value
+
+    form.addEventListener('submit', (e)=>{
+        console.log(form.elements['email'].value)
+        e.preventDafault()
+    })
+
+   // console.log(document.forms)
+
+
+  //  console.log(document.forms[1])
+
+
+
+
+</script>
+</body>
+</html>
